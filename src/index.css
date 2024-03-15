@@ -1,0 +1,36 @@
+.card {
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  padding: 20px;
+}
+
+.title {
+  display: flex;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: larger;
+  font-style: italic;
+}
+
+.description {
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  text-align: justify;
+}
+
+.tags {
+  display: flex;
+  color: rgb(74, 72, 72);
+}
+
+.tag-gap {
+  display: flex;
+  gap: 10px;
+}

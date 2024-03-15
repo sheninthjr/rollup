@@ -1,0 +1,13 @@
+# Exclude node_modules directory
+node_modules/
+
+# Exclude any files or directories starting with a dot
+.*
+
+# Exclude development and configuration files
+*.log
+*.config.js
+.env
+
+
+src/

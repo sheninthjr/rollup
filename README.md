@@ -103,7 +103,6 @@ import nodeResolve from "rollup-plugin-node-resolve";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import { terser } from "rollup-plugin-terser";
 import postcss from "rollup-plugin-postcss";
-import copy from "rollup-plugin-copy";
 import typescript from "@rollup/plugin-typescript";
 
 const config = {
@@ -135,12 +134,9 @@ const config = {
     }),
     typescript({ tsconfig: "./tsconfig.json" }),
     postcss({
-      extract: "dist/components/Card.css",
+      extract: "index.css",
       modules: false,
       minimize: true,
-    }),
-    copy({
-      targets: [{ src: "src/components/Card.css", dest: "dist/components" }],
     }),
     terser(),
   ],
@@ -159,8 +155,6 @@ export default config;
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "src/components/Card.tsx",
-    "src/components/Card.css"
   ],
   "scripts": {
     "dev": "vite",
